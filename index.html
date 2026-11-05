@@ -200,7 +200,18 @@
     .nv .pills span{font-size:13px;padding:6px 12px}
   }
   @media(hover:none){.nv .links a:hover{background:transparent}}
-  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.nv .gi img{transition:none}}
+  @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.nv .gi img{transition:none}}/* Make all gallery images the same size */
+.nv #nvGal .gi {
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+.nv #nvGal .gi img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 </style>
 </head>
 <body>
